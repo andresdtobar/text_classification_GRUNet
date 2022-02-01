@@ -106,23 +106,6 @@ def predict_text(text_test):
 
 def process_text(df, print_results=False):
     # Erase rows with null values
-    df = df.loc[~df['ObjetoProceso'].isnull()]
-
-    # Erase rows where text length is less than the MINUMUM_LENGHT_TEXT
-    df = df.loc[df['ObjetoProceso'].apply(len) > config._MIN_TEXT_LENGHT]
-
-    # Separate label column and make lower case all text
-    text = df['ObjetoProceso']
-    text = np.array([text.lower() for text in text])
-
-    # Spell checker and in-context correction
-    fixed_text = correct_words(text, print_results)
-    y = df['Clasificacion'].astype(int)
-
-    return fixed_text, y
-
-def process_text1(df, print_results=False):
-    # Erase rows with null values
     df = df.loc[~df['DetalleObjetoAContratar'].isnull()]
 
     # Erase rows where text length is less than the MINUMUM_LENGHT_TEXT
