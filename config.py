@@ -1,13 +1,13 @@
 # Database connection parameters
-_SERVER = '52.224.6.206' 
-_DATABASE = 'Previsora_SECOP' 
+_SERVER = '' 
+_DATABASE = '' 
 _USERNAME = 'admin_usersql' 
 _PASSWORD = 'admin_usersql'
 
 # Database 
 _SCHEMA = 'dbo'
-_TRAINING_TABLE = 'EntrenamientoSECOP'
-_OPT_TABLE = 'DatosSECOPI'
+_TRAINING_TABLE = ''
+_OPT_TABLE = ''
 
 #Model constants
 _MIN_TEXT_LENGHT = 20
